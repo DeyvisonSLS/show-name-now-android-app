@@ -1,52 +1,53 @@
 package com.example.learnjava;
 
+import java.util.HashSet;
+import java.util.List;
+import java.util.Locale;
+
 public class MyClass
 {
     public static void main(String[] args)
     {
-        Microphone microphone = new Microphone("Xingling00","Red", 12345);
-        microphone.setColor("Red");
-        microphone.setName("MyPhoneChingLing");
-        microphone.setModel(77777);
-        //
-        microphone.turnOn();
-        microphone.setVolume();
-        microphone.turnOff();
-        System.out.println(microphone.showDescription());
+        Employee deyvison = new Employee();
+        deyvison.setFirstName("Deyvison");
+        deyvison.setLastName("Santos");
+        deyvison.setAge(22);
+        deyvison.setIdNumber(1);
+        deyvison.setAnnualSalary(10000);
 
-        //  Line separator
-        System.out.println(System.getProperty("line.separator"));
-        //
+        Employee sara = new Employee();
+        sara.setFirstName("Sara");
+        sara.setLastName("Freitas");
+        sara.setAge(21);
+        sara.setIdNumber(2);
+        sara.setAnnualSalary(10000);
 
-        Microphone newMic = new Microphone();
-        newMic.setColor("Blue");
-        newMic.setName("BlueMic");
-        newMic.setModel(192837);
-        //
-        newMic.turnOn();
-        newMic.setVolume();
-        newMic.turnOff();
-        System.out.println(newMic.showDescription());
+        Manager arya = new Manager();
+        arya.setFirstName("Arya");
+        arya.setLastName("Santos");
+        arya.setAge(5);
+        arya.setIdNumber(3);
+        arya.setAnnualSalary(50000);
 
-        //  Line separator
-        System.out.println(System.getProperty("line.separator"));
-        //
+//        HashSet<Person> people = new HashSet<Person>();
+//
+//        people.add(sara);
+//        people.add(deyvison);
 
-        Microphone otherMic = new Microphone("myOtherMic", 8219);
-        otherMic.turnOn();
-        otherMic.setVolume();
-        otherMic.turnOff();
-        System.out.println(otherMic.showDescription());
+        Employee[] people = new Employee[]{sara, deyvison};
 
-//        System.out.println(Sum(1,2,3,4));
-    }
-    public static int Sum(int... numbers)
-    {
-        int total = 0;
-        for (int number : numbers)
+        for(Employee emp : people)
         {
-            total += number;
+            System.out.println(
+                    emp.getFirstName()
+                    + " (ID): "
+                    + emp.getIdNumber()
+                    + " | R$"
+                    + emp.getAnnualSalary()
+            );
         }
-        return total;
+
+//        Person legolas = new Person("Legolas", "Greenleaf", 2931);
+//        System.out.println(legolas.getAge());
     }
 }
