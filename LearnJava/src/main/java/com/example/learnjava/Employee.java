@@ -26,4 +26,13 @@ public class Employee extends Person
     {
         this.annualSalary = annualSalary;
     }
+
+    @Override
+    public String toString()
+    {
+        return getFirstName()
+                + " (ID): "
+                + getIdNumber()
+                + " | Gross Salary: " + getAnnualSalary();
+    }
 }

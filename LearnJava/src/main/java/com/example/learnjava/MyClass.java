@@ -8,6 +8,20 @@ public class MyClass
 {
     public static void main(String[] args)
     {
+        String myString = "Hello";
+        boolean hasCharH = myString.contains("H");
+        boolean stringEmpty = myString.isEmpty();
+
+        if(!stringEmpty && hasCharH)
+        {
+            System.out.println(myString);
+        }
+        else
+        {
+            System.out.println("Empty");
+        }
+
+
         Employee deyvison = new Employee();
         deyvison.setFirstName("Deyvison");
         deyvison.setLastName("Santos");
@@ -34,17 +48,11 @@ public class MyClass
 //        people.add(sara);
 //        people.add(deyvison);
 
-        Employee[] people = new Employee[]{sara, deyvison};
+        Employee[] people = new Employee[]{sara, deyvison, arya};
 
         for(Employee emp : people)
         {
-            System.out.println(
-                    emp.getFirstName()
-                    + " (ID): "
-                    + emp.getIdNumber()
-                    + " | R$"
-                    + emp.getAnnualSalary()
-            );
+            System.out.println(emp);
         }
 
 //        Person legolas = new Person("Legolas", "Greenleaf", 2931);
